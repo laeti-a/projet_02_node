@@ -3,9 +3,11 @@ extends layouts/frontend
 block content
     .ui.middle.aligned.center.aligned.grid
         .six.wide.column
-            form.ui.large.form(method="post", action="/")
+            h1 Connexion
+
+            form.ui.large.form(method="post", action="/login")
                 .ui.stacked.segment
-                    +field('email', 'email', 'your.email@address.tld')
+                    +field('email', 'email', 'your.email@address.com')
                     +field('password', 'password', 'Password')
                     button(type="submit").ui.fluid.large.teal.submit.button Login
 

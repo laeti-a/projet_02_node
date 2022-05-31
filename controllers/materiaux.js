@@ -1,7 +1,3 @@
-const page = {
-	materiaux: (req, res) => {
-        res.render("materiaux")
-    }
+export default function materiaux(req, res) {
+    res.render("materiaux")
 }
-
-module.exports = page

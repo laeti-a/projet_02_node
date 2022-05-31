@@ -1,24 +1,33 @@
-const express = require('express')
+import express from 'express'
+import authMiddleware from './middlewares.js'
+const router = express.Router()
 
-const page = require('./controllers/home')
-const page2 = require('./controllers/login')
-const page3 = require('./controllers/realisations')
-const page4 = require('./controllers/materiaux')
-
-// Router
-const router = (() => {
-	const apiRouter = express.Router()
+import HomeController from './controllers/home.js'
+import LoginController from './controllers/login.js'
+import LogoutController from './controllers/logout.js'
+import UserController from './controllers/user.js'
+import RealisationController from './controllers/realisations.js'
+import MateriauxController from './controllers/materiaux.js'
+import MeubleBoisController from './controllers/meublesBois.js'
+import ArmoireController from './controllers/armoire.js'
+import EtagereController from './controllers/etagere.js'
     
-	apiRouter.route('/home').get(page.home)
+router.get('/home', HomeController)
 
-	apiRouter.route('/login').get(page2.login)
+router.get('/login', LoginController)
+router.get('/logout', LogoutController)
 
-	apiRouter.route('/realisations').get(page3.realisations)
+router.get('/realisations', authMiddleware, RealisationController)
 
-	apiRouter.route('/materiaux').get(page4.materiaux)
+router.get('/materiaux', authMiddleware, MateriauxController)
+
+router.get('/meublesBois', authMiddleware, MeubleBoisController)
+
+router.get('/armoire', authMiddleware, ArmoireController)
+
+router.get('/etagere', authMiddleware, EtagereController)
 
 
-	return apiRouter
-})()
+router.post('/login', UserController)
 
-module.exports = router
+export default router

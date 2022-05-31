@@ -1,7 +1,3 @@
-const page = {
-	realisations: (req, res) => {
-        res.render("realisations")
-    }
+export default function realisations(req, res) {
+    res.render("realisations")
 }
-
-module.exports = page

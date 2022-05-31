@@ -1,7 +1,3 @@
-const page = {
-	login: (req, res) => {
-        res.render("login")
-    }
+export default function login(req, res) {
+    res.render("login")
 }
-
-module.exports = page
