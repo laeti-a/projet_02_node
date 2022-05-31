@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="//unpkg.com/semantic-ui@2.4.2/dist/semantic.min.css")
+        link(rel="stylesheet", href="/css/styles.css")
+        script(src="//unpkg.com/jquery@3.1.1/dist/jquery.min.js")
+        script(src="//unpkg.com/semantic-ui@2.4.2/dist/semantic.min.js")
+        block scripts
+
+        title Designer App
+    body
+
+        .ui.inverted.menu
+            a.item.active
+                i.home.icon
+                | Home
+            a.item(href="/realisations", class=(currentRoute === "/realisations" ? "active" : ""))
+                | Réalisations
+            a.item(href="/materiaux", class=(currentRoute === "/materiaux" ? "active" : ""))
+                | Matériaux
+
+            .right.menu
+            a.item(href="/login", class=(currentRoute === "/login" ? "active" : ""))
+                i.user.icon
+                | Login
+
+        block content

@@ -26,8 +26,6 @@ Il aimerait avoir une application qui liste les meubles qu'il réalise avec la p
 
 - Utilisez Node.js, Express et un moteur de rendu comme pug ou twing. React peut-être également utiliser pour la partie "front".
 
-- Si vous n'avez pas vu Node.js vous pouvez utiliser Symfony pour la partie API et React ou Angular.
-
 - Vous devez également créer une persistance pour les données avec MySQL ou MongoDB avec Mongoose pour Node.js et l'intégrer à l'API ou à l'application.
 
 - Il faudra également mettre en place une page de login pour consulter/lancer la création des statistiques.
