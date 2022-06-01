@@ -12,7 +12,7 @@ mongoose
   .connect('mongodb://localhost:27017/designer', {
       useNewUrlParser: true,
       useUnifiedTopology: true
-  }).then(init)
+  }).then(startApp)
 
 // Server config
 const app = express()
@@ -51,7 +51,7 @@ app.use((req, res, next) => {
 // Routes
 app.use(routes)
 
-async function init() {
+async function startApp() {
     console.log('Connexion à la base MongoDB initialisée')
 
     app.listen(port)
