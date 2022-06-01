@@ -10,7 +10,7 @@ block content
             
             form.form(method="post", action="/")
                     label(for="name") Quel est le nom de ce meuble ?
-                    input('text', 'name', 'Name', values && values.name)
+                    input('text', 'name', 'Name')
                     br
                     br
 
@@ -23,26 +23,26 @@ block content
                     br
                     label(for="img") Sélectionner une image :
                     br
-                    input('file', 'img', values && values.img)
+                    input('text', 'img')
 
                     br
                     br
                     label(for="wood") Est-ce que le meuble est composé de bois ?
-                    select('checkbox', 'wood', values && values.wood)
+                    select('checkbox', 'wood')
                         each val in ['Oui', 'Non']
                             option=val
 
                     br
                     br
                     label(for="metal") Est-ce que le meuble est composé de métal ?
-                    select('checkbox', 'metal', values && values.metal)
+                    select('checkbox', 'metal')
                         each val in ['Oui', 'Non']
                             option=val
 
                     br
                     br
                     label(for="plastic") Est-ce que le meuble est composé de plastique ?
-                    select('checkbox', 'plastic', values && values.plastic)
+                    select('checkbox', 'plastic')
                         each val in ['Oui', 'Non']
                             option=val
 
