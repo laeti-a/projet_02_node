@@ -1,0 +1,51 @@
+extends layouts/frontend
+
+block content
+    .ui.middle.aligned.center.aligned.grid
+        .six.wide.column
+            h1 Ajouter un nouveau meuble aux réalisations
+
+            if errorMessage
+                .ui.error.message!= errorMessage
+            
+            form.form(method="post", action="/")
+                    label(for="name") Quel est le nom de ce meuble ?
+                    input('text', 'name', 'Name', values && values.name)
+                    br
+                    br
+
+                    label(for="name") De quel type s'agit-il ?
+                    br
+                    select('select', 'type', 'Type of Furniture')
+                        each val in ['Armoire', 'Etagere']
+                            option=val
+                    br
+                    br
+                    label(for="img") Sélectionner une image :
+                    input('file', 'img')
+
+                    br
+                    br
+                    label(for="wood") Est-ce que le meuble est composé de bois ?
+                    select('checkbox', 'wood', values && values.wood)
+                        each val in ['Oui', 'Non']
+                            option=val
+
+                    br
+                    br
+                    label(for="metal") Est-ce que le meuble est composé de métal ?
+                    select('checkbox', 'metal', values && values.metal)
+                        each val in ['Oui', 'Non']
+                            option=val
+
+                    br
+                    br
+                    label(for="plastic") Est-ce que le meuble est composé de plastique ?
+                    select('checkbox', 'plastic', values && values.plastic)
+                        each val in ['Oui', 'Non']
+                            option=val
+
+                    br
+                    br
+                    br
+                    button(type="submit").ui.fluid.large.teal.submit.button Ajouter le nouveau meuble

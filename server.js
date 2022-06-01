@@ -4,6 +4,8 @@ import mongoose from"mongoose"
 import flash from 'connect-flash'
 import session from 'express-session'
 import MongoStore from 'connect-mongo'
+import path from 'path'
+import { fileURLToPath } from 'url'
 
 // Connexion à la BDD MongoDB
 mongoose
@@ -16,7 +18,11 @@ mongoose
 const app = express()
 const port = 3000
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+
 app.set("view engine", "pug")
+
+app.use(express.static(path.join(__dirname, 'public')))
 
 app.use(
     session({
@@ -46,7 +52,7 @@ app.use((req, res, next) => {
 app.use(routes)
 
 async function init() {
-    console.log('Connexion à la base MongoDB initialisée!')
+    console.log('Connexion à la base MongoDB initialisée')
 
     app.listen(port)
 }
