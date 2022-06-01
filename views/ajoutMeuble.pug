@@ -9,44 +9,48 @@ block content
                 .ui.error.message!= errorMessage
             
             form.form(method="post", action="/")
-                    label(for="name") Quel est le nom de ce meuble ?
-                    input(type='text', name='name', 'Name')
-                    br
-                    br
+                label(for="name" style="font-size:1.3em") Quel est le nom de ce meuble ?
+                br
+                input(type='text', name='name', 'Name')
+                br
+                br
 
-                    label(for="name") De quel type s'agit-il ?
-                    br
-                    select(type='select', name='type', 'Type of Furniture')
-                        each val in ['Armoire', 'Etagere']
-                            option=val
-                    br
-                    br
-                    label(for="img") Sélectionner une image :
-                    br
-                    input(type='file', name='img')
+                label(for="name" style="font-size:1.3em") De quel type s'agit-il ?
+                br
+                select(type='select', name='type', 'Type of Furniture')
+                    each val in ['Armoire', 'Etagere']
+                        option=val
+                br
+                br
+                label(for="img" style="font-size:1.3em") Sélectionner une image :
+                br
+                input(type='file', name='img')
 
-                    br
-                    br
-                    label(for="wood") Est-ce que le meuble est composé de bois ?
-                    select(type='select', name='wood')
-                        each val in ['Oui', 'Non']
-                            option=val
+                br
+                br
+                label(for="wood" style="font-size:1.3em") Est-ce que le meuble est composé de bois ?
+                br
+                select(type='select', name='wood')
+                    each val in ['Oui', 'Non']
+                        option=val
 
-                    br
-                    br
-                    label(for="metal") Est-ce que le meuble est composé de métal ?
-                    select(type='select', name='metal')
-                        each val in ['Oui', 'Non']
-                            option=val
+                br
+                br
+                label(for="metal" style="font-size:1.3em") Est-ce que le meuble est composé de métal ?
+                br
+                select(type='select', name='metal')
+                    each val in ['Oui', 'Non']
+                        option=val
 
-                    br
-                    br
-                    label(for="plastic") Est-ce que le meuble est composé de plastique ?
-                    select(type='select', name='plastic')
-                        each val in ['Oui', 'Non']
-                            option=val
+                br
+                br
+                label(for="plastic" style="font-size:1.3em") Est-ce que le meuble est composé de plastique ?
+                br
+                select(type='select', name='plastic')
+                    each val in ['Oui', 'Non']
+                        option=val
 
-                    br
-                    br
-                    br
-                    button(type="submit").ui.fluid.black.large.submit.button Ajouter le nouveau meuble
+                br
+                br
+                br
+                button(type="submit").ui.fluid.black.large.submit.button Ajouter le nouveau meuble
