@@ -12,7 +12,6 @@ html(lang="en")
 
         title Designer App
     body
-
         .ui.menu
             a.item(href="/home", class=(currentRoute === "/home" ? "active" : ""))
                 i.home.icon
@@ -26,5 +25,7 @@ html(lang="en")
             a.item(href="/login", class=(currentRoute === "/login" ? "active" : ""))
                 i.user.icon
                 | Login
+            a.item(href="/logout", class=(currentRoute === "/logout" ? "active" : ""))
+                | Logout
 
         block content
