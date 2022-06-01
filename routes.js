@@ -1,5 +1,5 @@
 import express from 'express'
-import authMiddleware from './middlewares.js'
+
 const router = express.Router()
 
 import HomeController from './controllers/home.js'
@@ -12,6 +12,9 @@ import MeubleBoisController from './controllers/meublesBois.js'
 import ArmoireController from './controllers/armoire.js'
 import EtagereController from './controllers/etagere.js'
 import AjoutMeubleController from './controllers/formAjoutMeuble.js'
+import { CreateFurnitureController } from './controllers/furniture.js'
+
+import authMiddleware from './middlewares.js'
     
 router.get('/home', HomeController)
 
@@ -32,5 +35,6 @@ router.get('/ajout-meuble', authMiddleware, AjoutMeubleController)
 
 
 router.post('/login', UserController)
+router.post('/', CreateFurnitureController)
 
 export default router
