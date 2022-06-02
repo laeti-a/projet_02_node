@@ -16,7 +16,7 @@ import EtagereController from './controllers/etagere.js'
 import AjoutMeubleController from './controllers/formAjoutMeuble.js'
 import { CreateFurnitureController } from './controllers/furniture.js'
 
-import authMiddleware from './middlewares.js'
+import {authMiddleware} from './middlewares.js'
     
 router.get('/home', HomeController)
 

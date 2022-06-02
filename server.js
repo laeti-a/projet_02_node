@@ -7,12 +7,14 @@ import MongoStore from 'connect-mongo'
 import path from 'path'
 import { fileURLToPath } from 'url'
 
+
 // Connexion à la BDD MongoDB
 mongoose
   .connect('mongodb://localhost:27017/designer', {
       useNewUrlParser: true,
       useUnifiedTopology: true
   }).then(startApp)
+
 
 // Server config
 const app = express()

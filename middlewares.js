@@ -1,4 +1,4 @@
-export default function authMiddleware(req, res, next) {
+export function authMiddleware(req, res, next) {
   if (!req.session.user) {
     return res.redirect('/login')
   }
