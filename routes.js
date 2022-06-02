@@ -9,6 +9,8 @@ import UserController from './controllers/user.js'
 import RealisationController from './controllers/realisations.js'
 import MateriauxController from './controllers/materiaux.js'
 import MeubleBoisController from './controllers/meublesBois.js'
+import MeubleMetalController from './controllers/meublesMetal.js'
+import MeublePlasticController from './controllers/meublesPlastic.js'
 import ArmoireController from './controllers/armoire.js'
 import EtagereController from './controllers/etagere.js'
 import AjoutMeubleController from './controllers/formAjoutMeuble.js'
@@ -26,6 +28,8 @@ router.get('/realisations', authMiddleware, RealisationController)
 router.get('/materiaux', authMiddleware, MateriauxController)
 
 router.get('/meublesBois', authMiddleware, MeubleBoisController)
+router.get('/meublesMetal', authMiddleware, MeubleMetalController)
+router.get('/meublesPlastic', authMiddleware, MeublePlasticController)
 
 router.get('/armoire', authMiddleware, ArmoireController)
 
