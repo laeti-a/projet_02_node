@@ -6,3 +6,8 @@ block content
     .ui.middle.aligned.center.aligned.grid
         .six.wide.column
             h1 Liste de toutes les armoires
+
+    each data in datas
+        h3=data.name
+        p=data.description
+        img(src="img/"+ data.img, alt=data.type+" "+data.name style="width:200px;height:300px;")

@@ -1,4 +1,3 @@
-import mongoose from "mongoose";
 import {FurnitureModel} from "../Models/Furniture.js"
 
 export default async function realisations(req, res) {
