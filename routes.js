@@ -18,7 +18,7 @@ import { CreateFurnitureController } from './controllers/furniture.js'
 
 import {authMiddleware} from './middlewares.js'
     
-router.get('/home', HomeController)
+router.get('/', HomeController)
 
 router.get('/login', LoginController)
 router.get('/logout', LogoutController)

@@ -10,7 +10,7 @@ export default async function UserController(req, res) {
       req.session.user = loggedUser;
   
       req.flash('success', `Connexion réussie `);
-      res.redirect('/home');
+      res.redirect('/');
     } catch (error) {
       req.flash('error', `Connexion impossible ! ${error.message}`);
       res.redirect('/login');
