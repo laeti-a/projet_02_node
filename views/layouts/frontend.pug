@@ -12,7 +12,8 @@ html(lang="en")
 
         title Designer App
     body
-        .ui.menu
+        .ui.menu(style="font-family:Courier;font-size:1.2em")
+            img(src="img/logo.png", alt="Logo website D.app", style="width:7%")
             a.item(href="/home", class=(currentRoute === "/home" ? "active" : ""))
                 i.home.icon
                 | Home

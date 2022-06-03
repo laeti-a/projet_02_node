@@ -3,23 +3,26 @@ extends layouts/frontend
 block content
     .ui.middle.aligned.center.aligned.grid
         .six.wide.column
-            h1 Réalisations 
+            h1(style="font-size:3em;margin-top:1em") Réalisations 
 
             div
                 p Par type
                 a(href="/armoire" style="font-size:1.5em;color:brown") Armoires - 
                 a(href="/etagere" style="font-size:1.5em;color:orange") Etagères 
             br
-            a(href="/ajout-meuble" style="color:darkgreen") Ajouter un nouveau meuble
-    
-    div(style="justify-content:center")
-        h2 Toutes les réalisations
+            br
+            br
+            a(href="/ajout-meuble" style="background-color:lightgrey;color:darkgreen;border: 1px solid black;padding:1em") Ajouter un nouveau meuble
+    br
+    br
+    div(style="font-family:Courier;width:80%;margin-left:10em")
+        h2(style="font-family:system-ui;") Toutes les réalisations
         each data in datas
-            h3=data.name
-            p=data.description
-            div
+            h2(style="font-family:Courier;")=data.name
+            p(style="font-size:1.2em")=data.description
+            div(style="display:flex")
                 img(src="img/"+ data.img, alt=data.type+" "+data.name style="width:200px;height:300px;")
-                table(style="border: 1px solid black")
+                table(style="border: 1px solid black;width:10%;height:30%;margin-left:3em")
                     tr 
                         th(style="border: 1px solid black;padding:10px;") <a href="/materiaux" style="color:orange">Bois</a> 
                         th(style="border: 1px solid black;padding:10px;") <a href="/materiaux" style="color:brown">Métal</a>

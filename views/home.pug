@@ -1,7 +1,12 @@
 extends layouts/frontend
 
 block content
-    div(style="text-align:center; position:relative; width:100%")
+    div(style="text-align:center; position:relative; width:100%;background-color:darkgrey")
         img(src="img/pic_home.jpg", alt="Croquis designer", style="background-size:cover;")
-        div(style="position:absolute; top:35%; left:41%") 
-            h1(style="font-size:3em;color:white;background-color:black;opacity:.6;padding:2em") Welcome 
+        div(style="position:absolute; top:35%; left:39%") 
+            h1(style="font-size:3em;color:white;background-color:black;opacity:.6;padding:2em;font-family:system-ui") Designer App
+
+
+    div(style="padding:5em; display:flex;font-family:Courier;justify-content:center") 
+        img(src="img/sketching.svg", alt="Sketching picture", style="width:30%")
+        p(style="width:30%;margin-left:8em;font-size:1.4em;") Cette application permet à son utilisateur de retrouver une liste de toutes ses <a href="/realisations" style="color:orange;font-weight:bold">réalisations</a> avec le détail de leur composition ainsi que leur nom et une description. <br> On retrouve également une page "<a href="/materiaux" style="color:orange;font-weight:bold">Matériaux</a>" indiquant le nom des entreprises fournissant les différentes matières premières. 
