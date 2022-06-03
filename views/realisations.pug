@@ -6,17 +6,17 @@ block content
             h1(style="font-size:3em;margin-top:1em") Réalisations 
 
             div
-                p Par type
-                a(href="/armoire" style="font-size:1.5em;color:brown") Armoires - 
-                a(href="/etagere" style="font-size:1.5em;color:orange") Etagères 
+                p(style="font-family:Courier;font-size:1.1em") Par type
+                a(href="/armoire" style="font-size:1.5em;color:brown;font-family:Courier;") Armoires - 
+                a(href="/etagere" style="font-size:1.5em;color:orange;font-family:Courier;") Etagères 
             br
             br
             br
-            a(href="/ajout-meuble" style="background-color:lightgrey;color:darkgreen;border: 1px solid black;padding:1em") Ajouter un nouveau meuble
+            a(href="/ajout-meuble" style="background-color:lightgrey;color:darkgreen;border: 1px solid black;padding:1em;font-family:Courier;") Ajouter un nouveau meuble
     br
     br
     div(style="font-family:Courier;width:80%;margin-left:10em;")
-        h2(style="font-family:system-ui;") Toutes les réalisations
+        h2(style="font-family:system-ui;background-color:brown; color:orange;padding:1em") Toutes les réalisations
         each data in datas
             h2(style="font-family:Courier;")=data.name
             p(style="font-size:1.2em")=data.description
