@@ -2,15 +2,16 @@ extends layouts/frontend
 
 block content
     div
-        a(href="/materiaux" style="color:brown") Retour aux matériaux
+        a(href="/materiaux" style="color:brown;border: 1px solid black;padding:5px;margin:30px 0 0 20px;background-color:lightgrey") Retour aux matériaux
     .ui.middle.aligned.center.aligned.grid
         .six.wide.column
             h1 Tous les meubles composés de bois
 
-    each data in datas
-        h3=data.name
-        p=data.description
-        img(src="img/"+ data.img, alt=data.type+" "+data.name style="width:200px;height:300px;")
+    div(style="font-family:Courier;width:80%;margin-left:10em;margin-top:5em")
+        each data in datas
+            h3(style="font-family:Courier;")=data.name
+            p(style="font-size:1.2em")=data.description
+            img(src="img/"+ data.img, alt=data.type+" "+data.name style="width:200px;height:300px;")
 
     footer 
         div(style="padding:5em;background-color:brown;display:flex;margin-top:6em")
