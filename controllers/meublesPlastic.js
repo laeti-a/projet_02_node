@@ -1,15 +1,7 @@
 import {FurnitureModel} from "../Models/Furniture.js"
 
 export default async function meublesPlastic(req, res) {
-    const furniture = await FurnitureModel.find({})
-
-    let plasticFurniture = []
-
-    furniture.forEach(val =>{
-        if(val.plastic == 'Oui'){
-            plasticFurniture.push(val)
-        }
-    })
+    const furniture = await FurnitureModel.find({plastic:'Oui'})
     
-    res.render("meublesPlastic", {datas:plasticFurniture})
+    res.render("meublesPlastic", {datas:furniture})
 }
