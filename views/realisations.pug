@@ -15,7 +15,7 @@ block content
             a(href="/ajout-meuble" style="background-color:lightgrey;color:darkgreen;border: 1px solid black;padding:1em") Ajouter un nouveau meuble
     br
     br
-    div(style="font-family:Courier;width:80%;margin-left:10em")
+    div(style="font-family:Courier;width:80%;margin-left:10em;")
         h2(style="font-family:system-ui;") Toutes les réalisations
         each data in datas
             h2(style="font-family:Courier;")=data.name
@@ -31,3 +31,12 @@ block content
                         td(style="border: 1px solid black;padding:10px;")=data.wood
                         td(style="border: 1px solid black;padding:10px;")=data.metal
                         td(style="border: 1px solid black;padding:10px;")=data.plastic
+
+    footer 
+        div(style="padding:5em;background-color:brown;display:flex;margin-top:6em")
+            img(src="img/logo.png", alt="Logo website D.app", style="width:15%;margin-left:10em")
+            ul(style="list-style-type:none; font-family:Courier;font-size:1.4em;")
+                li <a href="/realisations" style="color:orange;">Réalisations</a>
+                li <a href="/materiaux" style="color:orange;">Matériaux</a>
+                li <a href="/ajout-meuble" style="color:orange;">Ajouter un nouveau meuble</a>
+                li <a href="/login" style="color:orange;">Login</a>
